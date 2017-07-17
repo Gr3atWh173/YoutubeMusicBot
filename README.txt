@@ -1,15 +1,15 @@
-YoutubeMusicBot version 0.0.1
+YoutubeMusicBot version 0.1.0
 =============================
 
 Dependencies:
-1. Selenium
+1. VLC Player
 2. Pafy
 3. Praw
 4. App registered with reddit
 
 What?
 1. Pulls down list of songs from a music subreddit
-2. Plays them using firefox
+2. Plays them using VLC.
 
 Why?
 Much better than doing it myself.
