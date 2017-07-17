@@ -20,5 +20,7 @@ How?
 1. Register app with reddit
 2. Add app info to the script
 3. Run script
+  - python music.py <subreddit>
+  - defaults to metal \m/
 4. ???
 5. Profit.
