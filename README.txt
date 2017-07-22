@@ -6,7 +6,6 @@ Dependencies:
 2. Pafy
 3. Praw
 4. App registered with reddit
-5. Firefox
 
 What?
 1. Pulls down list of songs from a music subreddit
