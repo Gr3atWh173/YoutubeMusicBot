@@ -2,7 +2,7 @@
 # YoutubeMusicBot v0.1.0
 # author: Gr3atwh173
 #
-# TODO: Barely works. Breaks in various situations. Fix it.
+# TODO: Add functionality to play and pause
     
 import sys
 import time
@@ -22,7 +22,8 @@ try:
 except:
     SUBREDDIT = 'metal'
 
-to_play_urls = []
+to_play_urls = []
+
 p = vlc.Instance().media_player_new()
 reddit = praw.Reddit(client_id=CLIENT_ID, client_secret=SECRET, user_agent=USER_AGENT)
 
