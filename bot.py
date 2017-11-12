@@ -16,7 +16,7 @@ CLIENT_ID = 'your client id goes here'
 SECRET = 'your app secret goes here'
 USER_AGENT = 'Praw:YoutubeMusicBot:v0.0.1'
 try:
-    SUBREDDIT = sys.argv[1] if sys.argv[1] else 'metal'
+    SUBREDDIT = sys.argv[1]
 except:
     SUBREDDIT = 'metal'
 
