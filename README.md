@@ -10,12 +10,18 @@ Much better than doing it myself. Besides, who doesn't like
 some good music while programming.
 
 ## How?
-First, clone the repo and cd into it. <br>
-Then cd into its directory and execute: 
+1. First, clone the repo
+```bash
+$ git clone https://github.com/Gr3atWh173/YoutubeMusicBot
+```
+2. Then cd into its directory and execute: 
 
 ```bash
 $ pip install -r requirements.txt
 ```
+3. Now [register an app with reddit](https://ssl.reddit.com/prefs/apps/) <br>
+
+4. Update ```bot.py``` with your API details
 
 You should now be ready to use YoutubeMusicBot.
 
