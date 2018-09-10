@@ -1,9 +1,6 @@
 #!/usr/bin/env python
-# YoutubeMusicBot v0.1.0
-# author: Gr3atwh173
-
 import sys
-import time
+from time import sleep
 import praw
 import vlc
 import pafy
@@ -11,10 +8,12 @@ import pafy
 def get_sec(tstr):
     h, m, s = tstr.split(':')
     return int(h) * 3600 + int(m) * 60 + int(s)
-    
-CLIENT_ID = 'your client id goes here'
-SECRET = 'your app secret goes here'
+
+# your config shit goes here
+CLIENT_ID = ''
+SECRET = ''
 USER_AGENT = 'Praw:YoutubeMusicBot:v0.0.1'
+
 try:
     SUBREDDIT = sys.argv[1]
 except:
@@ -37,8 +36,7 @@ for url in to_play_urls:
         print("[*] Currently Playing: {}".format(str(video.title)))
         p.set_mrl(video.getbestaudio().url)
         p.play()
-        time.sleep(get_sec(str(video.duration))+10)
-    except KeyboardInterrupt:
-        break
+        sleep(get_sec(str(video.duration))+5)
     except:
+        # :D
         print("[!] Skipping a video.")
