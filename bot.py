@@ -2,6 +2,7 @@
 import sys
 from time import sleep
 import praw
+import re
 import vlc
 import pafy
 
@@ -14,10 +15,8 @@ CLIENT_ID = ''
 SECRET = ''
 USER_AGENT = 'Praw:YoutubeMusicBot:v0.0.1'
 
-try:
-    SUBREDDIT = sys.argv[1]
-except:
-    SUBREDDIT = 'metal'
+SUBREDDIT = sys.argv[1] if len(sys.argv) > 1 else 'metal'
+TAG = sys.argv[2] if len(sys.argv) > 2 else ''
 
 to_play_urls = []
 i = vlc.Instance()
@@ -27,7 +26,8 @@ reddit = praw.Reddit(client_id=CLIENT_ID, client_secret=SECRET, user_agent=USER_
 print("[*] Fetching song list from reddit.com/r/{}".format(SUBREDDIT))
 for s in reddit.subreddit(SUBREDDIT).hot(limit=50):
     if 'youtube.com' in s.url or 'youtu.be' in s.url:
-        to_play_urls.append(s.url)
+        if TAG == '' or bool(re.search('\\[.*('+TAG+').*\\]', s.title, re.IGNORECASE)):
+            to_play_urls.append(s.url)
 print("[*] Fetched {} links.".format(str(len(to_play_urls))))
 
 for url in to_play_urls:
