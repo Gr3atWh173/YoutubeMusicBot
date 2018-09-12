@@ -25,8 +25,15 @@ $ pip install -r requirements.txt
 
 You should now be ready to use YoutubeMusicBot.
 
+5. Provide YoutubeMusicBot with the subreddit name: 
+
 ```bash
 $ python bot.py music_subreddit
+```
+ You could also limit the search results to the ones, containing a specific tag:
+
+```bash
+$ python bot.py music_subreddit tag
 ```
 ## Requirements
 <ol>
