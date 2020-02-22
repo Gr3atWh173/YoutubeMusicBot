@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+# small hack to get libvlc get working
+# since just adding it to PATH on Windows doesn't work anymore
+# see https://stackoverflow.com/questions/59014318/filenotfounderror-could-not-find-module-libvlc-dll
+import platform
+if platform.system() == 'Windows':
+    import os
+    os.add_dll_directory(r'C:/Program Files/VideoLAN/VLC')
+
 import pafy
 import praw
 import re
@@ -12,7 +20,7 @@ from time import sleep
 CLIENT_ID = ''
 SECRET = ''
 
-USER_AGENT = 'Praw:YoutubeMusicBot:v0.0.1'
+USER_AGENT = 'Praw:YoutubeMusicBot:v0.0.1' 
 
 def get_sec(tstr):
     h, m, s = tstr.split(':')
