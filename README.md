@@ -1,44 +1,29 @@
 # Youtube Music Bot
-### Version 0.0.1
+### Version 2.0.0
 
 ## What?
-YoutubeMusicBot pulls down a list of youtube links from a 
-subreddit of your choosing and plays their audio.
+YoutubeMusicBot pulls down a list of youtube links from subreddits of your choosing and plays them with VLC.
 
 ## Why?
-Much better than doing it myself. Besides, who doesn't like
-some good music while programming.
+Much better than doing it myself. Besides, who doesn't like some good music while working.
 
 ## How?
-1. First, clone the repo
+0. Install VLC
+
+1. Clone the repo
 ```bash
 $ git clone https://github.com/Gr3atWh173/YoutubeMusicBot
 ```
 2. Then cd into its directory and execute: 
 
 ```bash
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
-3. Now [register an app with reddit](https://ssl.reddit.com/prefs/apps/) <br>
 
-4. Update ```bot.py``` with your API details
-
-You should now be ready to use YoutubeMusicBot.
-
-5. Provide YoutubeMusicBot with the subreddit name: 
-
+You should now be ready to use YoutubeMusicBot. 
 ```bash
-$ python bot.py music_subreddit
+$ python bot.py usage
 ```
- You could also limit the search results to the ones, containing a specific tag:
-
-```bash
-$ python bot.py music_subreddit tag
-```
-## Requirements
-<ol>
-  <li> VLC Player version 2.2.X </li>
-</ol>
 
 ## This doesn't work for me
 Open an issue or a PR.
