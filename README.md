@@ -1,6 +1,13 @@
 # Youtube Music Bot
 ### Version 2.0.0
 
+## Changelog v2.0.0
+1. Remove pafy, praw as dependencies
+	- No need to register an app with reddit
+	- Reduced dependencies
+2. Add youtube-dl, requests
+	- Now we can stream SoundCloud links as well
+
 ## What?
 YoutubeMusicBot pulls down a list of youtube links from subreddits of your choosing and plays them with VLC.
 
